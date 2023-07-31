@@ -53,7 +53,10 @@ public class Application {
 @ConfigurationProperties
 class UriConfiguration {
 
-	private String httpbin = "http://httpbin:80";
+	/*
+	* http://httpbin:80
+	*/
+	private String httpbin = "https://www.ibm.com/au-en";
 
 	public String getHttpbin() {
 		return httpbin;
