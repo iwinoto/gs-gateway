@@ -35,7 +35,7 @@ public class Application {
 				.filters(f -> f.addRequestHeader("Hello", "World"))
 				.uri(httpUri))
 			.route(p -> p
-				.host("*.circuitbreaker")
+				.host("*.circuitbreaker.com")
 				.filters(f -> f.circuitBreaker(config -> config
 					.setName("myCmd")
 					.setFallbackUri("forward:/fallback")))
@@ -53,10 +53,7 @@ public class Application {
 @ConfigurationProperties
 class UriConfiguration {
 
-	/*
-	* http://httpbin:80
-	*/
-	private String httpbin = "https://www.ibm.com/au-en";
+	private String httpbin = "http://httpbin.org:80";
 
 	public String getHttpbin() {
 		return httpbin;
